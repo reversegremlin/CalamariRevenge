@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -11,6 +12,13 @@ public class Player : MonoBehaviour
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 10f;
     [SerializeField] float xClampValue = 5f;
     [SerializeField] float yClampValue = 5f;
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float controlPitchFactor = -20f;
+    [SerializeField] float controlRollFactor = -20f;
+
+    float xThrow, yThrow;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +31,27 @@ public class Player : MonoBehaviour
     {
         moveHorizontal();
         moveVertical();
+        processRotation();
+
+    }
+
+    private void processRotation()
+    {
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
+        float yaw = transform.localPosition.x * positionYawFactor;
+
+        float roll = xThrow * controlRollFactor;
+
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+        // pitch, yaw, roll
+
 
     }
 
     private void moveVertical()
     {
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * ySpeed * Time.deltaTime;
         //take the ships x position
         // - 5 to +5
@@ -38,9 +61,12 @@ public class Player : MonoBehaviour
         transform.localPosition = new Vector3(transform.localPosition.x, newYPosition, transform.localPosition.z);
     }
 
+    //order of rotation matters
+    //rotate ship 90 deg
+
     private void moveHorizontal()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float xOffset = xThrow * xSpeed * Time.deltaTime;
         //take the ships x position
         // - 5 to +5

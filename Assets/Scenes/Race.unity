@@ -341,7 +341,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 35
+  field of view: 66
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -367,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.0036012828, y: -0.008999702, z: -0.000032254495, w: -0.9999531}
-  m_LocalPosition: {x: -62.7, y: 132.6, z: -2}
+  m_LocalPosition: {x: -63, y: 132.5, z: -18.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1669919729}
@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_LocalRotation.x
@@ -685,10 +685,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5239290e33c42ba98f0fc160be1c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 35
-  ySpeed: 35
-  xClampValue: 8
-  yClampValue: 5
+  xSpeed: 85
+  ySpeed: 85
+  xClampValue: 22
+  yClampValue: 12.5
+  positionPitchFactor: -3.5
+  positionYawFactor: 2
+  controlPitchFactor: -20
+  controlRollFactor: -20
 --- !u!1 &1724188365
 GameObject:
   m_ObjectHideFlags: 0
