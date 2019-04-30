@@ -21,15 +21,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = xThrow * xSpeed * Time.deltaTime;
-        //take the ships x position
-        // - 5 to +5
-        //work out a new x position
-        float rawNewXPosition = transform.localPosition.x + xOffset;
-        float newXPosition = Mathf.Clamp(rawNewXPosition, -xClampValue, xClampValue);
-        transform.localPosition = new Vector3(newXPosition, transform.localPosition.y, transform.localPosition.z);
+        moveHorizontal();
+        moveVertical();
 
+    }
+
+    private void moveVertical()
+    {
         float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * ySpeed * Time.deltaTime;
         //take the ships x position
@@ -38,6 +36,17 @@ public class Player : MonoBehaviour
         float rawNewYPosition = transform.localPosition.y + yOffset;
         float newYPosition = Mathf.Clamp(rawNewYPosition, -yClampValue, yClampValue);
         transform.localPosition = new Vector3(transform.localPosition.x, newYPosition, transform.localPosition.z);
+    }
 
+    private void moveHorizontal()
+    {
+        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        float xOffset = xThrow * xSpeed * Time.deltaTime;
+        //take the ships x position
+        // - 5 to +5
+        //work out a new x position
+        float rawNewXPosition = transform.localPosition.x + xOffset;
+        float newXPosition = Mathf.Clamp(rawNewXPosition, -xClampValue, xClampValue);
+        transform.localPosition = new Vector3(newXPosition, transform.localPosition.y, transform.localPosition.z);
     }
 }
