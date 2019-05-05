@@ -5,20 +5,24 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 85f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 85f;
     [SerializeField] float xClampValue = 22f;
     [SerializeField] float yClampValue = 12.5f;
+
+    [Header("Screen-Position Based")]
     [SerializeField] float positionPitchFactor = -3.5f;
     [SerializeField] float positionYawFactor = 2f;
+    [Header("Control-Throw Based")]
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
 
+    bool isControlEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,19 +30,15 @@ public class Player : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        print("Player Triggered Something!");
-    }
-
-
     // Update is called once per frame
     void Update()
     {
-        moveHorizontal();
-        moveVertical();
-        processRotation();
-
+        if (isControlEnabled)
+        {
+            moveHorizontal();
+            moveVertical();
+            processRotation();
+        }
     }
 
     private void processRotation()
@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
         float yaw = transform.localPosition.x * positionYawFactor;
 
         float roll = xThrow * controlRollFactor;
-
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
         // pitch, yaw, roll
@@ -81,4 +80,12 @@ public class Player : MonoBehaviour
         float newXPosition = Mathf.Clamp(rawNewXPosition, -xClampValue, xClampValue);
         transform.localPosition = new Vector3(newXPosition, transform.localPosition.y, transform.localPosition.z);
     }
+
+    private void OnPlayerDeath()
+    {
+        print("Got Message, starting death sequence");
+        isControlEnabled = false;
+
+    }
+
 }
