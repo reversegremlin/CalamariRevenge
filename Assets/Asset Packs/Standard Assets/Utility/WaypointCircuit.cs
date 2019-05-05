@@ -61,7 +61,7 @@ namespace UnityStandardAssets.Utility
         {
             int point = 0;
 
-            if (Length <= Mathf.Epsilon)
+            if (Length == 0)
             {
                 Length = distances[distances.Length - 1];
             }
