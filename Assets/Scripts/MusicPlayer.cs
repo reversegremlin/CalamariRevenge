@@ -16,10 +16,10 @@ public class MusicPlayer : MonoBehaviour
         if (objs.Length > 1)
         {
             Destroy(this.gameObject);
+        } else
+        {
+            DontDestroyOnLoad(this.gameObject);
         }
-
-        DontDestroyOnLoad(this.gameObject);
-
     }
 
     // Update is called once per frame
