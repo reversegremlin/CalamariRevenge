@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     {
         AddNonTriggerBoxCollider();
         scoreBoard = FindObjectOfType<ScoreBoard>();
-
     }
 
     private void AddNonTriggerBoxCollider()
@@ -31,7 +30,6 @@ public class Enemy : MonoBehaviour
     {
         print("Enemy Hit: " + gameObject.name);
         scoreBoard.ScoreHit(scorePerHit);
-
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
 

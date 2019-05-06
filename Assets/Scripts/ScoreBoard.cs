@@ -18,12 +18,10 @@ public class ScoreBoard : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void ScoreHit(int scorePerHit)
+    public void ScoreHit(int enemyValue)
     {
-        print("Score Hit Called!");
-        score = score + scorePerHit;
+        score = score + enemyValue;
         print(score);
-        print("score per hit" + scorePerHit);
         scoreText.text = score.ToString();
     }
 }
