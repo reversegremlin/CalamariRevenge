@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 85f;
@@ -25,12 +25,6 @@ public class Player : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        print("Player Triggered Something!");
-    }
-
 
     // Update is called once per frame
     void Update()
