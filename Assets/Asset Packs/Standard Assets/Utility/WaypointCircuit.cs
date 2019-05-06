@@ -65,7 +65,7 @@ namespace UnityStandardAssets.Utility
             {
                 Length = distances[distances.Length - 1];
             }
-
+             
             dist = Mathf.Repeat(dist, Length);
 
             while (distances[point] < dist)
