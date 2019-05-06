@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Triangle Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
       propertyPath: m_LocalPosition.x
       value: 528.43823
@@ -662,6 +666,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: d148bd46a5a4c4e4d96a7c02442100fc, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d148bd46a5a4c4e4d96a7c02442100fc, type: 3}
 --- !u!1 &388978393 stripped
@@ -967,6 +975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienFighterGreen (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1089099125859580, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4351941035781178, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.238205
@@ -1115,6 +1127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Smiley Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
       value: 294.43823
@@ -1194,6 +1210,10 @@ PrefabInstance:
     - target: {fileID: 1089099125859580, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
       propertyPath: m_Name
       value: AlienFighterGreen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089099125859580, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4351941035781178, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1586,6 +1606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienFighterGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1089099125859580, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4351941035781178, guid: adc8a98e73ca77a41b7d79a6beec2ccb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.067612
@@ -1758,6 +1782,10 @@ PrefabInstance:
     - target: {fileID: 1528543826248096, guid: 0eb1dc9b0d8505f45a18313076e1e653, type: 3}
       propertyPath: m_Name
       value: White Torpedo Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528543826248096, guid: 0eb1dc9b0d8505f45a18313076e1e653, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4365625331430498, guid: 0eb1dc9b0d8505f45a18313076e1e653, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2214,6 +2242,10 @@ PrefabInstance:
     - target: {fileID: 1960062034117444, guid: 9288bdcd172a05947ba0eb1fde7f0346, type: 3}
       propertyPath: m_Name
       value: White Destroyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960062034117444, guid: 9288bdcd172a05947ba0eb1fde7f0346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4243049357039692, guid: 9288bdcd172a05947ba0eb1fde7f0346, type: 3}
       propertyPath: m_LocalPosition.x
