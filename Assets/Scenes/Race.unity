@@ -1549,6 +1549,12 @@ Transform:
   m_Father: {fileID: 1806132988}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 42.815002, z: 0}
+--- !u!1 &1046540619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4938657388115246568, guid: 33942a27e06a55e498652847d7d15f99,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556085421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1131865779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1732,6 +1738,12 @@ Transform:
   m_Father: {fileID: 1850673152}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1280987956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 602628036, guid: 33942a27e06a55e498652847d7d15f99,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556085421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331573572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2203,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_Name
-      value: StarSparrow6
+      value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938657388115246568, guid: 33942a27e06a55e498652847d7d15f99,
+        type: 3}
+      propertyPath: m_Name
+      value: GunLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 602628036, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+      propertyPath: m_Name
+      value: GunRight
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2237,15 +2258,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1669919730, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669919730, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 1280987956}
+    - target: {fileID: 1669919730, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1046540619}
     - target: {fileID: 4456014977983380162, guid: 33942a27e06a55e498652847d7d15f99,
         type: 3}
       propertyPath: deathFX
       value: 
       objectReference: {fileID: 2029973236}
-    - target: {fileID: 602628036, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
-      propertyPath: m_Name
-      value: Bullets Right
-      objectReference: {fileID: 0}
     - target: {fileID: 602628033, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: CollisionModule.enabled
       value: 1
@@ -2257,11 +2286,6 @@ PrefabInstance:
     - target: {fileID: 602628033, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: CollisionModule.type
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4938657388115246568, guid: 33942a27e06a55e498652847d7d15f99,
-        type: 3}
-      propertyPath: m_Name
-      value: Bullets Left
       objectReference: {fileID: 0}
     - target: {fileID: 4938657388115246573, guid: 33942a27e06a55e498652847d7d15f99,
         type: 3}

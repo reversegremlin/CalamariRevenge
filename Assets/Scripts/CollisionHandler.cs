@@ -19,7 +19,6 @@ public class CollisionHandler : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         StartDeathSequence();
-
     }
 
     private void StartDeathSequence()
@@ -33,12 +32,5 @@ public class CollisionHandler : MonoBehaviour
     private void ReloadLevel()
     {
         SceneManager.LoadScene(1);
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

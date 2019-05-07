@@ -12,20 +12,18 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 85f;
     [SerializeField] float xClampValue = 22f;
     [SerializeField] float yClampValue = 12.5f;
-    [Header("Screen-Position based")]
+    [SerializeField] GameObject[] guns;
 
+    [Header("Screen-Position based")]
     [SerializeField] float positionPitchFactor = -3.5f;
     [SerializeField] float positionYawFactor = 2f;
 
     [Header("Control-Throw based")]
-
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
-
     bool isControlEnabled = true;
-
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +39,35 @@ public class PlayerController : MonoBehaviour
             moveHorizontal();
             moveVertical();
             processRotation();
+            processsFiring();
         }
+    }
 
+    private void processsFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        } else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+       foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
     }
 
     private void processRotation()
@@ -52,11 +77,8 @@ public class PlayerController : MonoBehaviour
 
         float roll = xThrow * controlRollFactor;
 
-
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
         // pitch, yaw, roll
-
-
     }
 
     private void moveVertical()
@@ -90,6 +112,5 @@ public class PlayerController : MonoBehaviour
     {
         print("got message, die now...");
         isControlEnabled = false;
-
     }
 }

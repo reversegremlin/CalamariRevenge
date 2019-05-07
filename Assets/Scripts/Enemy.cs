@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
 
     ScoreBoard scoreBoard;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +27,9 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        print("Enemy Hit: " + gameObject.name);
         scoreBoard.ScoreHit(scorePerHit);
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
-
         Destroy(gameObject);
     }
 
