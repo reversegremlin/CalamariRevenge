@@ -73,7 +73,6 @@ namespace UnityStandardAssets.Utility
                 ++point;
             }
 
-
             // get nearest two points, ensuring points wrap-around start & end of circuit
             p1n = ((point - 1) + numPoints)%numPoints;
             p2n = point;
@@ -85,7 +84,6 @@ namespace UnityStandardAssets.Utility
             if (smoothRoute)
             {
                 // smooth catmull-rom calculation between the two relevant points
-
 
                 // get indices for the surrounding 2 points, because
                 // four points are required by the catmull-rom function

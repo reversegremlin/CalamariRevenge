@@ -10,7 +10,6 @@ public class ScoreBoard : MonoBehaviour
     int score = 0;
     Text scoreText;
 
-
     // Start is called before the first frame update
     void Start()
     {
