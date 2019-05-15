@@ -47,26 +47,20 @@ public class PlayerController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButton("Fire"))
         {
-            ActivateGuns();
+            SetGunsActive(true);
         } else
         {
-            DeactivateGuns();
+            SetGunsActive(false);
         }
     }
 
-    private void DeactivateGuns()
+    private void SetGunsActive(bool isActive)
     {
-       foreach (GameObject gun in guns)
+        foreach (GameObject gun in guns)  //may mess up death fx on player
         {
-            gun.SetActive(false);
-        }
-    }
-
-    private void ActivateGuns()
-    {
-        foreach (GameObject gun in guns)
-        {
-            gun.SetActive(true);
+            //gun.SetActive(isActive);  replaced with disabling the particlen emitters so lasers keep going if you aren't firing.
+            var particleEmission = gun.GetComponent<ParticleSystem>().emission;
+            particleEmission.enabled = isActive;
         }
     }
 
