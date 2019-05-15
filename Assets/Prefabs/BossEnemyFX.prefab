@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2172991491274129061}
   - component: {fileID: 830889969083021631}
   m_Layer: 0
-  m_Name: EnemyFX
+  m_Name: BossEnemyFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2172991491274129060}
   serializedVersion: 6
-  lengthInSec: 0.5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
