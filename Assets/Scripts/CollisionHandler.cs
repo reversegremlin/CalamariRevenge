@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 
-    bool isDebug = true;
+    bool isDebug = false;
 
     [Tooltip("In Seconds")][SerializeField] float levelLoadDelay = 1f;
     [Tooltip("FX prefab on player")][SerializeField] GameObject deathFX;
